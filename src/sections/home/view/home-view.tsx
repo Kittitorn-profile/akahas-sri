@@ -17,19 +17,19 @@ const MEMORIAL_IMAGE = '/assets/akhahas-sri/rip-1.jpeg';
 
 const highlights = [
   {
-    icon: '29',
-    title: 'Wild Routes',
-    body: 'The Dawn Trail of Rocky Mountain Park links lake viewpoints with quiet pine forests.',
+    icon: '99',
+    title: 'ผลงานการแสดง',
+    body: 'การแสดงดนตรีพื้นบ้านอีสานและกิจกรรมทางวัฒนธรรมในหลากหลายเวที',
   },
   {
-    icon: '08',
-    title: 'Local Guides',
-    body: 'Small groups move with expert trip leaders, weather checks, and flexible pacing.',
+    icon: '99',
+    title: 'สมาชิกวง',
+    body: 'นักดนตรี นักแสดง และทีมสร้างสรรค์ที่ร่วมสืบสานศิลปวัฒนธรรมอีสาน',
   },
   {
-    icon: '92',
-    title: 'Hidden Places',
-    body: 'Travel beyond the famous overlooks into coves, ridgelines, and waterfall paths.',
+    icon: '99',
+    title: 'รางวัลและเวทีประกวด',
+    body: 'ประสบการณ์จากการแสดงและการแข่งขันดนตรีพื้นบ้านระดับภูมิภาคและระดับประเทศ',
   },
 ];
 
@@ -125,7 +125,7 @@ export function HomeView() {
                 textTransform: 'uppercase',
               }}
             >
-              AKHAHAS SRI
+              AKHAHAS&apos;SRI
             </Typography>
             <Typography variant="h1">อรรคฮาตสี</Typography>
 
@@ -194,7 +194,7 @@ export function HomeView() {
                   <Typography variant="body1" sx={{ mt: 0.8, color: 'rgba(246,237,219,0.58)' }}>
                     {item.body}
                   </Typography>
-                  <Typography
+                  {/* <Typography
                     variant="subtitle1"
                     sx={{
                       mt: 1.5,
@@ -202,8 +202,8 @@ export function HomeView() {
                       textTransform: 'uppercase',
                     }}
                   >
-                    More detailed
-                  </Typography>
+                    รากหดกหด
+                  </Typography> */}
                 </Box>
               </Stack>
             ))}
@@ -287,9 +287,15 @@ export function HomeView() {
         }}
       >
         <Box sx={{ mx: 'auto', maxWidth: 1000, textAlign: 'center' }}>
-          <Typography variant="h3">ผลงาน</Typography>
-          <Typography sx={{ mt: 1.4, color: 'rgba(246,237,219,0.62)', fontSize: 12 }}>
-            There will be a small title here.
+          <Typography variant="h3" color="primary">
+            สมเด็จพระกนิษฐาธิราชเจ้า ฯ เชิญขวัญแม่โคสกเจ้า เข้าคืนนา
+          </Typography>
+          <Typography variant="subtitle1" color="primary" sx={{ mt: 1.4, textAlign: 'center' }}>
+            พระเทพนารี สองมือนี้ข้าถวาย มืออันเคยกรำหนักปักกล้าทำนามิวาย ขอฟ้อนถวายพระเทพนารี
+            อิตถีรัตนา ข้าหมายยิ่งว่า เทิดพระทรงศรี ขอได้สดับขับกล่อมพาที ลำนำชาวนา
+            เถิดพระทูลพระหม่อม เอย พระยอดกัลยา ข้า บ่มีสิ่งสูงค่าถวาย หากบ่ควรค่าใด
+            ขอทรงอภัยพระยอดกัลยา ธ แสนประเสริฐ ขอสำราญเถิด พระพุทธเจ้าข้า เหล่ากสิกรจักฟ้อนถวยพร
+            ไหว้ว่า ขอพระกนิษฐา จงยศยิ่งยงทรงชัย อนตายสังอันใด อย่าได้กายใกล้ พระทูลกระหม่อม เอย
           </Typography>
 
           <Box
@@ -304,37 +310,7 @@ export function HomeView() {
             }}
           >
             {tours.map((tour, index) => (
-              <Box
-                key={tour.title}
-                sx={{
-                  height: { xs: 245, md: 305 },
-                  overflow: 'hidden',
-                  position: 'relative',
-                  border:
-                    index === 1
-                      ? '1px solid rgba(234,215,161,0.9)'
-                      : '1px solid rgba(246,237,219,0.08)',
-                  boxShadow:
-                    index === 1 ? '0 0 32px rgba(217,181,109,0.2)' : '0 22px 55px rgba(0,0,0,0.4)',
-                  backgroundImage: `
-                    linear-gradient(180deg, rgba(9,47,33,0.04) 0%, rgba(9,47,33,0.26) 42%, rgba(5,37,24,0.9) 100%),
-                    linear-gradient(0deg, rgba(217,181,109,0.1), rgba(217,181,109,0.1)),
-                    url(${SCENES_IMAGE})
-                  `,
-                  backgroundSize: '230% 230%',
-                  backgroundPosition: tour.position,
-                  borderRadius: '4px',
-                }}
-              >
-                <Box sx={{ left: 0, right: 0, bottom: 28, position: 'absolute' }}>
-                  <Typography sx={{ fontSize: 17, fontWeight: 800, textTransform: 'uppercase' }}>
-                    {tour.title}
-                  </Typography>
-                  <Typography sx={{ mt: 0.8, color: 'rgba(246,237,219,0.66)', fontSize: 11 }}>
-                    {tour.subtitle}
-                  </Typography>
-                </Box>
-              </Box>
+              <Image src={`/assets/akhahas-sri/ac-${index + 1}.png`} ratio="3/4" />
             ))}
           </Box>
         </Box>
@@ -373,19 +349,19 @@ export function HomeView() {
                 maxWidth: 520,
                 fontSize: { xs: 42, sm: 58, md: 68 },
                 fontWeight: 800,
-                lineHeight: 0.96,
+                lineHeight: 1.2,
                 textTransform: 'uppercase',
               }}
             >
-              Discover the World in a New Way
+              ศิลปะ ส่องทาง ให้แก่กัน เสมอ
             </Typography>
-
+            {/* 
             <Stack direction="row" spacing={2} alignItems="center" sx={{ mt: 4.5 }}>
               <PlayButton />
               <Typography sx={{ fontSize: 12, fontWeight: 800, textTransform: 'uppercase' }}>
                 Watch the video
               </Typography>
-            </Stack>
+            </Stack> */}
 
             <Typography
               sx={{
@@ -396,9 +372,10 @@ export function HomeView() {
                 lineHeight: 1.75,
               }}
             >
-              Have you ever heard an avalanche roar in the mountains? Just after the avalanche
-              roars, and there is absolute silence. You stop understanding where you are. That
-              moment is ours.
+              อันว่า การใดแท้ ธรรมดาดีชอบ ฝูงข้าตกแต่งถ้วน อันล้วนที่ควร คุส่วนสมเสมอหน้า
+              เป็นไปในโลก ผลาผลแผ่ก้วง กวมพื้นแผ่นไตร ค้อมว่าสาธุการไหว้ แล้วนบนิ้วยอลง
+              กราบหว่างบูฮมฮอย บ่อนมรคาเพียงฮาบ การอันสมกระบวนเบื้อง ทั้งผองปองประโยชน์
+              ตางให้โลกเล่าเฮื้องภายซ้อยซาเซ็ง
             </Typography>
           </Box>
 
