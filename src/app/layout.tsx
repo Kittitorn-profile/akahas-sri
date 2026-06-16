@@ -33,6 +33,9 @@ const AuthProvider =
   (CONFIG.auth.method === 'auth0' && Auth0AuthProvider) ||
   JwtAuthProvider;
 
+const OG_IMAGE_URL =
+  'https://res.cloudinary.com/dkdbilwtj/image/upload/v1781623827/og-images_wrlxnc.jpg';
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -46,6 +49,13 @@ export const metadata: Metadata = {
       url: `${CONFIG.assetsDir}/favicon.ico`,
     },
   ],
+  openGraph: {
+    images: [OG_IMAGE_URL],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [OG_IMAGE_URL],
+  },
 };
 
 // ----------------------------------------------------------------------
